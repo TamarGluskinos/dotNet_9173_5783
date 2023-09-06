@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Orders>
+  <Order>
+    <ID>1</ID>
+    <CustomerName>suri Spitzer</CustomerName>
+    <CustomerEmail>s5558969@gmail.com</CustomerEmail>
+    <CustomerAddress>sorozkin 48</CustomerAddress>
+    <OrderDate>2022-12-28T00:00:00</OrderDate>
+    <ShipDate>2023-02-28T15:08:39.8002866+02:00</ShipDate>
+    <DeliveryDate />
+  </Order>
+  <Order>
+    <ID>2</ID>
+    <CustomerName>Dvara keen</CustomerName>
+    <CustomerEmail>Devara@outlook.co.il</CustomerEmail>
+    <CustomerAddress>Malchei Yisrael 12</CustomerAddress>
+    <OrderDate>2022-12-28T00:00:00</OrderDate>
+    <ShipDate>2023-01-26T12:47:47.7237892+02:00</ShipDate>
+    <DeliveryDate>2023-02-28T16:09:11.1866754+02:00</DeliveryDate>
+  </Order>
+  <Order>
+    <ID>3</ID>
+    <CustomerName>Tamar Geler</CustomerName>
+    <CustomerEmail>Tgeler@gmail.com</CustomerEmail>
+    <CustomerAddress>Tiferet 55</CustomerAddress>
+    <OrderDate>2023-01-15T18:21:14.8637861+02:00</OrderDate>
+    <ShipDate>2023-01-23T16:38:19.2172465+02:00</ShipDate>
+    <DeliveryDate>2023-02-28T16:09:02.1138344+02:00</DeliveryDate>
+  </Order>
+  <Order>
+    <ID>4</ID>
+    <CustomerName>Racheli Teler</CustomerName>
+    <CustomerEmail>Rochi55869@gmail.com</CustomerEmail>
+    <CustomerAddress>Neve Yaakov 50</CustomerAddress>
+    <OrderDate>2023-01-15T18:21:45.9010253+02:00</OrderDate>
+    <ShipDate>2023-02-28T15:08:48.8725438+02:00</ShipDate>
+    <DeliveryDate />
+  </Order>
+  <Order>
+    <ID>5</ID>
+    <CustomerName>Bracha Wais</CustomerName>
+    <CustomerEmail>BWais@gamil.com</CustomerEmail>
+    <CustomerAddress>Mismar Hagvul 53</CustomerAddress>
+    <OrderDate>2023-02-05T17:54:51.3705287+02:00</OrderDate>
+    <ShipDate>2023-02-26T12:47:54.7575053+02:00</ShipDate>
+    <DeliveryDate />
+  </Order>
+  <Order>
+    <ID>6</ID>
+    <CustomerName>Chani Geler</CustomerName>
+    <CustomerEmail>Chana@gmail.com</CustomerEmail>
+    <CustomerAddress>Pisga 36</CustomerAddress>
+    <OrderDate>2023-02-19T18:25:59.2503462+02:00</OrderDate>
+    <ShipDate>2023-02-28T16:12:38.0757202+02:00</ShipDate>
+    <DeliveryDate />
+  </Order>
+  <Order>
+    <ID>7</ID>
+    <CustomerName>Ester Glik</CustomerName>
+    <CustomerEmail>G555@gmail.com</CustomerEmail>
+    <CustomerAddress>Minchat Yizchak 20</CustomerAddress>
+    <OrderDate>2023-01-19T18:27:37.9599455+02:00</OrderDate>
+    <ShipDate>2023-01-26T12:48:06.8144121+02:00</ShipDate>
+    <DeliveryDate>2023-02-28T16:10:00.8586241+02:00</DeliveryDate>
+  </Order>
+  <Order>
+    <ID>8</ID>
+    <CustomerName>Chaya Aaronzon</CustomerName>
+    <CustomerEmail>55996@gmail.com</CustomerEmail>
+    <CustomerAddress>rambam 28</CustomerAddress>
+    <OrderDate>2023-02-19T18:35:21.4673319+02:00</OrderDate>
+    <ShipDate />
+    <DeliveryDate />
+  </Order>
+  <Order>
+    <ID>9</ID>
+    <CustomerName>Efrat Cohen</CustomerName>
+    <CustomerEmail>Cohen@co.il</CustomerEmail>
+    <CustomerAddress>fff</CustomerAddress>
+    <OrderDate>2023-02-23T18:48:10.2595618+02:00</OrderDate>
+    <ShipDate />
+    <DeliveryDate />
+  </Order>
+  <Order>
+    <ID>10</ID>
+    <CustomerName>Devora Levi</CustomerName>
+    <CustomerEmail>Dlv@gmail.com</CustomerEmail>
+    <CustomerAddress>Malchei Yisrael 30</CustomerAddress>
+    <OrderDate>2023-02-21T13:08:04.9282733+02:00</OrderDate>
+    <ShipDate />
+    <DeliveryDate />
+  </Order>
+</Orders>

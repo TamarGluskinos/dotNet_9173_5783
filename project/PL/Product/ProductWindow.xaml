@@ -1,0 +1,28 @@
+﻿<Window x:Class="PL.ProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        x:Name="ProductWndw"
+        Title="ProductWindow" Height="450" Width="800" Foreground="#FF02059C">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtProductName"  Text="{Binding Path=product.Name, Mode=TwoWay}" HorizontalAlignment="Left" Margin="373,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" />
+        <Label x:Name="lblProductName" HorizontalContentAlignment="Center" Content="name:" HorizontalAlignment="Left" Margin="274,109,0,0" VerticalAlignment="Top" Height="30" Width="90"/>
+        <TextBox x:Name="txtProductPrice" Text="{Binding Path=product.Price, Mode=TwoWay}" HorizontalAlignment="Left" Margin="371,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" />
+        <Label x:Name="lblProductPrice" HorizontalContentAlignment="Center" Content="price:" HorizontalAlignment="Left" Margin="284,176,0,0" VerticalAlignment="Top" Height="30" Width="84"/>
+        <ComboBox x:Name="cmbProductCategorySelector" Text="{Binding Path=product.Category, Mode=TwoWay}" HorizontalAlignment="Left" Margin="372,147,0,0" VerticalAlignment="Top" Width="120" Height="20" />
+        <Label x:Name="lblProductCategory" Content="category:" HorizontalAlignment="Left" Margin="286,143,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtProductAmount"  Text="{Binding Path=product.InStock, Mode=TwoWay}" HorizontalAlignment="Left" Margin="372,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" />
+        <Label x:Name="lblProductAmount" HorizontalContentAlignment="Center" Content="amount in stock:" HorizontalAlignment="Left" Margin="237,210,0,0" VerticalAlignment="Top" Height="30" Width="126"/>
+        <Button x:Name="btnAddOrUpdate" Visibility="{Binding btnAddUpdateVisiblestate, Converter={StaticResource BoolToVisibilityConverter} }" Content="ADD"  Margin="0,285,0,0"   Click="btnAddOrUpdate_Click" Style="{StaticResource BtnStyle}" HorizontalAlignment="Center"/>
+        <Button x:Name="btnDelete" Visibility="{Binding btnDeleteVisiblestate, Converter={StaticResource BoolToVisibilityConverter} }" Content="delete"  Margin="554,285,0,0"  Click="btnDelete_Click" Style="{StaticResource BtnStyle}"/>
+        <TextBox x:Name="txtProductCategory" Visibility="{Binding ChangeVisiblestate}" Text="{Binding Path=product.Category}" HorizontalAlignment="Left" Margin="371,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" />
+        <Button x:Name="btnAddToCart"  Visibility="{Binding ChangeVisiblestate}" Content="add to cart" Margin="358,284,0,0" Height="37" Width="107" FontSize="14" Click="btnAddToCart_Click" Style="{StaticResource BtnStyle}"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="PL.Order.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="Order" Height="530" Width="800" Foreground="#FF02059C">
+    <Grid >
+        <TextBox x:Name="txtOrderId" IsReadOnly="True" Text="{Binding Path=ID, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <Label x:Name="lblOrderId" Content="Id:" HorizontalAlignment="Left" Margin="296,12,0,0" VerticalAlignment="Top" Height="30"/>
+        <TextBox x:Name="txtOrderCustomerName" IsReadOnly="True" Text="{Binding Path=CustomerName, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <Label x:Name="lblOrderCustomerName" Content="customer name: " HorizontalAlignment="Left" Margin="222,40,0,0" VerticalAlignment="Top"  RenderTransformOrigin="-0.128,-0.175" Height="30"/>
+        <TextBox x:Name="txtOrderCustomerEmail" IsReadOnly="True" Text="{Binding Path=CustomerEmail, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <Label x:Name="lblOrderCustomerEmail" Content="customer email:" HorizontalAlignment="Left" Margin="227,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.756,-0.04" Height="30"/>
+        <TextBox x:Name="txtOrderCustomerAddress" IsReadOnly="True" Text="{Binding Path=CustomerAddress, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <Label x:Name="lblOrderCustomerAddress" Content="customer address:" HorizontalAlignment="Left" Margin="212,94,0,0" VerticalAlignment="Top" Height="30"/>
+        <TextBox x:Name="txtOrderOrderDate" IsReadOnly="True" Text="{Binding Path=OrderDate, TargetNullValue=OrderDate, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,152,0,0"  VerticalAlignment="Top" Width="120" Height="25"/>
+        <Label x:Name="lblOrderOrderDate" Content="order date:" HorizontalAlignment="Left" Margin="252,152,0,0" VerticalAlignment="Top" Height="30" />
+        <TextBox x:Name="txtOrderStatus" IsReadOnly="True" Text="{Binding Path=Status, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,126,0,0"  VerticalAlignment="Top" Width="120" Height="20"/>
+        <Label x:Name="lblOrderStatus" Content="status:" HorizontalAlignment="Left" Margin="276,122,0,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="1.958,-0.172"/>
+        <TextBox x:Name="txtOrderShipDate" IsReadOnly="True"  Text="{Binding Path=ShipDate, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,183,0,0"  VerticalAlignment="Top" Width="120" Height="25">
+        </TextBox>
+        <Label x:Name="lblOrderShipDate" Content="ship date:" HorizontalAlignment="Left" Margin="258,183,0,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.282,1.065"/>
+        <TextBox x:Name="txtOrderDeliveryDate" IsReadOnly="True" Text="{Binding Path=DeliveryDate, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,217,0,0"  VerticalAlignment="Top" Width="120" Height="25"/>
+        <Label x:Name="lblOrderDeliveryDate" Content="delivery date:" HorizontalAlignment="Left" Margin="239,217,0,0" VerticalAlignment="Top" Height="30"/>
+        <ListView x:Name="listViewOrderItems" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="337,253,37,135">
+            <ListView.View>
+                <GridView AllowsColumnReorder="true"  >
+                    <GridViewColumn x:Name="gvcProductID" DisplayMemberBinding="{Binding Path=ProductID}" Width="60" Header="Prod ID"/>
+                    <GridViewColumn x:Name="gvcProductName" DisplayMemberBinding="{Binding Path=ProductName}" Width="60" Header="Prod Name"/>
+                    <GridViewColumn x:Name="gvcPrice" DisplayMemberBinding="{Binding Path=Price,StringFormat=${0}}" Width="60" Header="Price"/>
+                    <GridViewColumn x:Name="gvcAmount" DisplayMemberBinding="{Binding Path=Amount}" Width="60" Header="Amount"/>
+                    <GridViewColumn x:Name="gvcTotalPrice" DisplayMemberBinding="{Binding Path=TotalPrice,StringFormat=${0}}" Width="60" Header="Total Price"/>
+                    <GridViewColumn Width="30" x:Name="gvcPlus">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Tag="{Binding ProductID}" Content="+" VerticalAlignment="Center" Click="btnPlus_Click" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn  Width="20" x:Name="gvcMinus">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Tag="{Binding ProductID}" Content="-" VerticalAlignment="Center" Click="btnMinus_Click" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn x:Name="gvcX">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Tag="{Binding ProductID}" Content="X" VerticalAlignment="Center" Click="btnDelete_Click" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="lblOrderItems" Content="items:" HorizontalAlignment="Left" Margin="274,248,0,0" VerticalAlignment="Top" Height="24" Width="47" RenderTransformOrigin="1.194,0.593"/>
+        <Button x:Name="btnUpdateStatus" Content="update status" Click="btnUpdateStatus_Click" Margin="59,405,0,0" Height="34" Width="227" FontWeight="Bold"  Style="{StaticResource BtnStyle}" FontSize="12"/>
+        <Button x:Name="btnAddProduct" Content="Add Product" Margin="656,420,0,0" Height="25" Width="107" FontWeight="Bold"  Style="{StaticResource BtnStyle}" FontSize="12" Click="btnAddProduct_Click" RenderTransformOrigin="0.607,-1.057"/>
+        <!--<Button x:Name="btnUpdateOrderDetails" Content="update details" Click="btnUpdateOrderDetails_Click" HorizontalAlignment="Left" Margin="197,384,0,0" VerticalAlignment="Top" Height="34" Width="110" RenderTransformOrigin="-5.854,2.597"/>-->
+    </Grid>
+</Window>
+
